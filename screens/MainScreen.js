@@ -5,6 +5,8 @@ import {
     AntDesign,
     FontAwesome
 } from '@expo/vector-icons';
+import * as Linking from 'expo-linking';
+import * as WebBrowser from 'expo-web-browser';
 
 import TitleText from '../components/TitleText'
 import BodyText from '../components/BodyText'
@@ -13,6 +15,15 @@ import IconButton from '../components/IconButton';
 
 import Values from '../constants/Values'
 import Styles from '../constants/Styles'
+
+// Function for opening URL
+const handleBrowse = (url) => {
+    Linking.openURL(url);
+    this.props.onPress && this.props.onPress();
+}
+const handleBrowseWithWebBrowser = (url) => {
+    WebBrowser.openBrowserAsync(url);
+  };
 
 export default function MainScreen(props) {
     return (
@@ -38,11 +49,8 @@ export default function MainScreen(props) {
 
                 {/* Icons for social */}
                 <View style={styles.iconContainer}>
-                    <Ionicons name="md-checkmark-circle" size={32} color="green" />
-                    <AntDesign name="github" size={50} color="black" />
-                    <FontAwesome.Button style={styles.iconButton} name="facebook" backgroundColor="#3b5998" onPress={() => { }}>
-                    </FontAwesome.Button>
-                    <IconButton component={AntDesign} icon={"github"} size={50} color="black" onPress={()=>{}} />
+                    <IconButton component={AntDesign} icon={"github"} size={50} color="black" onPress={() => { handleBrowse("https://github.com/farukomer58") }} />
+                    <IconButton component={AntDesign} icon={"linkedin-square"} size={50} color="black" onPress={() => { handleBrowse("https://www.linkedin.com/in/omercitik/") }} />
                 </View>
 
             </View>
@@ -90,9 +98,9 @@ const styles = StyleSheet.create({
         marginTop: 20
     },
 
-    iconButton:{
-        paddingRight:0,
-        fontSize:30,
+    iconButton: {
+        paddingRight: 0,
+        fontSize: 30,
     }
 
 
