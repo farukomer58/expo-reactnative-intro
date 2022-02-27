@@ -38,7 +38,7 @@ export default function MainScreen(props) {
                     <TitleText style={styles.title}>I am Omer Faruk</TitleText>
                     <BodyText style={Styles.paragraph}>
 
-                        I am Omer Citik, 19 years old and I am currently in my third year of the HBO-ICT: Software Engineering course at
+                        I am Omer Citik, 20 years old and I am currently in my third year of the HBO-ICT: Software Engineering course at
                         the Hogeschool van Amsterdam (HVA). I am very interested and passionate about developing software in general
                         and programming. This since a young age. During my education, I participated in various software projects, and
                         gained a lot of theoretical knowledge.
