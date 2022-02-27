@@ -8,7 +8,7 @@ import Values from '../constants/Values'
 export default function Header(props) {
     return (
         <View style={styles.header}>
-            <TitleText>{props.title}</TitleText>
+            <TitleText style={styles.title}>{props.title}</TitleText>
         </View>
     )
 }
@@ -18,5 +18,10 @@ const styles = StyleSheet.create({
         backgroundColor: Values.primaryColor,
         width: "100%",
         alignItems:"center",
+        paddingTop:20,
     },
+
+    title:{
+        fontSize:40,
+    }
 })
