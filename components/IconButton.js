@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         // padding: 5,
         // marginTop: 5,
         // marginBottom: 5,
-        marginHorizontal: 5
+        // marginHorizontal: 5
     },
     btnContainer: {
         // flex: 1,

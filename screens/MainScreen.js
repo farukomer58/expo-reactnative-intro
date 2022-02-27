@@ -23,7 +23,7 @@ const handleBrowse = (url) => {
 }
 const handleBrowseWithWebBrowser = (url) => {
     WebBrowser.openBrowserAsync(url);
-  };
+};
 
 export default function MainScreen(props) {
     return (
@@ -36,7 +36,16 @@ export default function MainScreen(props) {
                         style={styles.profileImage}
                     />
                     <TitleText style={styles.title}>I am Omer Faruk</TitleText>
-                    <BodyText style={Styles.paragraph}>Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    </BodyText>
+                    <BodyText style={Styles.paragraph}>
+
+                        I am Omer Citik, 19 years old and I am currently in my third year of the HBO-ICT: Software Engineering course at
+                        the Hogeschool van Amsterdam (HVA). I am very interested and passionate about developing software in general
+                        and programming. This since a young age. During my education, I participated in various software projects, and
+                        gained a lot of theoretical knowledge.
+                        I cannot wait to apply my knowledge in real world and further improve my competencies and skills in software
+                        development. My profession is mainly in Java, JavaScript, React, Java Spring .
+
+                    </BodyText>
 
                 </View>
 
