@@ -3,13 +3,14 @@ import { View, StyleSheet, Image, Button } from 'react-native'
 
 import TitleText from '../components/TitleText'
 import BodyText from '../components/BodyText'
+import CustomButton from '../components/CustomButton'
 
 import Values from '../constants/Values'
 import Styles from '../constants/Styles'
 
 export default function MainScreen(props) {
     return (
-        <View>
+        <View style={styles.container}>
 
             <View style={styles.imageContainer}>
                 <Image
@@ -19,11 +20,17 @@ export default function MainScreen(props) {
                 <TitleText style={styles.title}>I am Omer Faruk</TitleText>
                 <BodyText style={Styles.paragraph}>Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    Lorem    </BodyText>
 
-
-                <Button title='Change Color' />
-
-                {/* Icons for social */}
             </View>
+
+            <View style={styles.buttonContainer}>
+                {/* Here apply some functionality  */}
+                <CustomButton title='Change Color' />
+                <CustomButton style={styles.button} title='Change Color' />
+            </View>
+
+
+            {/* Icons for social */}
+        
 
         </View>
     )
@@ -31,12 +38,15 @@ export default function MainScreen(props) {
 
 const styles = StyleSheet.create({
 
+    container: {
+        marginHorizontal: 20,
+        marginVertical: 50,
+    },
+
     // Image Styling
     imageContainer: {
-        paddingTop: 50,
         justifyContent: "center",
         alignItems: "center"
-
     },
 
     profileImage: {
@@ -45,6 +55,16 @@ const styles = StyleSheet.create({
     },
 
     title: {
+    },
+
+    buttonContainer: {
+        flexDirection:"row",
+        justifyContent:"center",
+        marginTop:20,
+    },
+
+    button:{
+        backgroundColor: Values.secondaryColor,
     }
 
 
